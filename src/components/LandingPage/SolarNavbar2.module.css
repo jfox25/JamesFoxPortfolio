@@ -1,0 +1,198 @@
+.circle {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: calc(50% - var( --size) / 2);
+    left: calc(50% - var( --size) / 2);
+    border-radius: 50%;
+    border: 5px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2vw;
+    padding: 0;
+    margin: 0;
+}
+.circle:hover {
+    cursor: pointer;
+}
+.hiddenCircle {
+    display: none;
+}
+.ring {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: calc(50% - var( --size) / 2);
+    left: calc(50% - var( --size) / 2);
+    border: 4px solid black;
+    border-radius: 50%;
+}
+.hiddenRing {
+    animation: hideRing 0.4s forwards;
+}
+.aboutCircle {
+    --size : 6vw;
+    background-color: whitesmoke;
+}
+.aboutCircle:hover {
+    border: 5px solid rgb(199, 198, 198);
+}
+.aboutCircleActive {
+    --size : 6vh;
+    background-color: whitesmoke;
+    animation: flyTo 5s forwards 1s ease-in;
+}
+.resumeCircle {
+    --size : 5.1vw;
+    background-color: rgb(209, 209, 255);
+    animation: resumeRotation 17s infinite linear;
+}
+.resumeCircle:hover {
+    border: 5px solid rgb(168, 168, 232);
+}
+.resumeCircle:hover {
+    animation-play-state: paused;
+}
+.resumeCircleActive {
+    --size : 5.1vw;
+    background-color: rgb(209, 209, 255);
+    animation: centerCircle 1.5s forwards ease-in-out, flyTo 4.5s forwards 1.5s ease-in;
+}
+.resumeRing {
+    --size : 30vw;
+}
+.projectsCircle {
+    --size : 5vw;
+    background-color: rgb(164, 159, 159);
+    animation: projectsRotation 16s infinite linear;
+}
+.projectsCircle:hover {
+    border: 5px solid rgb(126, 124, 124);
+}
+.projectsCircle:hover {
+    animation-play-state: paused;
+}
+.projectsCircleActive {
+    --size : 5.6vw;
+    background-color: rgb(196, 192, 192);
+    animation: centerCircle 1.7s forwards ease-in-out, flyTo 4.3s forwards 1.7s ease-in; 
+}
+.projectsRing {
+    --size: 18vw;
+}
+.funCircle {
+    --size : 4.2vw;
+    background-color: tan;
+    animation: funRotation 19s infinite linear;
+}
+.funCircle:hover {
+    border: 5px solid rgb(176, 146, 107);
+}
+.funCircle:hover {
+    animation-play-state: paused;
+}
+.funCircleActive {
+    --size : 4.2vw;
+    background-color: rgb(214, 194, 167);
+    animation: centerCircle 2s forwards ease-out, flyTo 4s forwards 2s ease-in; 
+}
+.funRing {
+    --size : 42vw;
+}
+.solarNavContainer {
+    height: 89vh;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: scale(2, 2);
+    animation: showSolarNavbar 1.3s forwards 0.3s;
+}
+
+@keyframes projectsRotation {
+    0%{
+        transform:rotate(0deg)
+                  translate(-9vw)
+                  rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg)
+                  translate(-9vw)
+                  rotate(-360deg);
+      }
+}
+@keyframes resumeRotation {
+    0%{
+        transform:rotate(0deg)
+                  translate(-15vw)
+                  rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg)
+                  translate(-15vw)
+                  rotate(-360deg);
+      }
+}
+@keyframes funRotation {
+    0%{
+        transform:rotate(0deg)
+                  translate(-21vw)
+                  rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg)
+                  translate(-21vw)
+                  rotate(-360deg);
+      }
+}
+@keyframes centerCircle{
+    0%{
+        
+    }
+    100%{
+        transform: translate(0%, 0%);
+    }
+ 
+}
+
+@keyframes flyTo{
+    0%{
+        
+    }
+    80% {
+        border-radius: 50%;
+        width: 55%;
+    }
+    100%{
+        width: 100%;
+        height: 110vh;
+        border-radius: 0px;
+        transform: translate(-47.75%, -50%);
+    }
+ 
+}
+@keyframes hideRing{
+    0%{
+    border: 3px solid black;
+    }
+    33% {
+        border: 2px solid #111;
+    }
+    66% {
+        border: 1px solid #222;
+    }
+    100%{
+        border: none
+    }
+}
+@keyframes showSolarNavbar{
+    0%{
+        
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}

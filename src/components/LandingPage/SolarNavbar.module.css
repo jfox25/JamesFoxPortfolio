@@ -1,0 +1,208 @@
+.circle {
+    background-color: #B3CBFC;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    font-weight: bold; 
+}
+.circle:hover {
+    cursor: pointer;
+    border: 5px solid black;
+}
+.projectsActive {
+    border: 5px solid black;
+    background-color: #B3CBFC;
+    width: 5.8vw;
+    height: 5.8vw;
+    border-radius: 50%;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.resumeActive {
+   border: 5px solid black;
+   background-color: #B3CBFC;
+   width: 5.1vw;
+   height: 5.1vw;
+   border-radius: 50%;
+   font-size: 1.2vw;
+   font-weight: bold;
+}
+.funActive {
+    border: 5px solid black;
+    background-color: #B3CBFC;
+    width: 4.3vw;
+    height: 4.3vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.aboutActive {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    margin: auto;
+    border: 5px solid black;
+}
+.aboutCircle {
+    background-color: #B3CBFC;
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    margin: auto;
+}
+.solarNavbarContainer {
+    height: 85vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.ring {
+    width: 18vw;
+    height: 18vw;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.ringHidden {
+    width: 18vw;
+    height: 18vw;
+    border: 3px solid black;
+    border-radius: 50%;
+    animation: hideRing 0.3s forwards;
+}
+.circleHidden {
+    animation: hideCircle 0.4s forwards;
+}
+.projectRing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.projectCircle {
+    /* position: absolute; */
+    width: 5.8vw;
+    height: 5.8vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.projectAnimation {
+    animation: projectCircle 13s linear infinite;
+}
+.projectCircle:hover {
+    animation-play-state: paused;
+}
+.resumeRing {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+}
+.resumeCircle {
+    position: absolute;
+    width: 5.1vw;
+    height: 5.1vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+.resumeAnimation {
+    animation: resumeCircle 15s linear infinite;
+}
+.resumeCircle:hover {
+    animation-play-state: paused;
+}
+.funRing {
+    height: 42vw;
+    width: 42vw;
+    position: absolute;
+}
+.funCircle {
+    position: absolute;
+    width: 4.3vw;
+    height: 4.3vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.funAnimation {
+    animation: funCircle 18s linear infinite; 
+}
+.funCircle:hover {
+    animation-play-state: paused;
+}
+.hidden {
+    display: none;
+}
+
+@keyframes projectCircle{
+    0%{
+      transform:rotate(0deg)
+                translate(-9vw)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-9vw)
+                rotate(-360deg);
+    }
+  }
+@keyframes resumeCircle{
+    0%{
+      transform:rotate(0deg)
+                translate(-15vw)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-15vw)
+                rotate(-360deg);
+    }
+  }
+@keyframes funCircle{
+    0%{
+      transform:rotate(0deg)
+                translate(-21vw)
+                rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-21vw)
+                rotate(-360deg);
+    }
+  }
+@keyframes hideRing{
+0%{
+border: 3px solid black;
+}
+33% {
+    border: 2px solid #111;
+}
+66% {
+    border: 1px solid #222;
+}
+100%{
+    border: none
+}
+}
+@keyframes hideCircle{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes centerCircle{
+    0%{
+        
+    }
+    100%{
+        transform: translate(50%, 50%);
+    }
+}

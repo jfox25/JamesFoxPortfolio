@@ -1,0 +1,53 @@
+.nameHeading {
+   color: whitesmoke;
+   font-weight: bold;
+   font-size: 60px;
+   margin: 0;
+   padding: 0;
+}
+.titleHeading {
+    position: absolute;
+    left: 5%;
+    color: #444;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+.headingContainer {
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 4vw;
+    opacity: 0;
+    transform: scale(2, 2);
+    animation: showHeading 2.1s forwards 0.3s;
+}
+.headingContainerAnimate {
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 4vw;
+    opacity: 1;
+    transform: scale(1, 1);
+    animation: hideHeading 2s forwards;
+}
+
+@keyframes showHeading{
+    0%{
+        
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+@keyframes hideHeading{
+    0%{
+        
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2, 2);
+    }
+}
+
