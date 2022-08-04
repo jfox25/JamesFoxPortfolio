@@ -3,21 +3,35 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: 3vw;
     opacity: 0;
-    animation: showContent 0.6s 1.7s forwards;
+    animation: showContent 0.6s 1.2s forwards;
 }
 .navbarContainer {
     position: fixed;
-    width: 100%;
+    width: 80%;
+    height: 10vw;
     top: -20vh;
     background-color: rgb(21, 21, 21);
     border: 10px solid #444;
     border-radius: 5px;
     opacity: 0;
     transform: scale(0.6, 0.6);
-    animation: showNavbar 1.5s ease-in forwards;
+    animation: showNavbar 1s ease-in forwards;
+    left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
+}
+.smallNavbar {
+    top: 0vh;
+    animation: showNavbar 1s ease-in forwards, shrinkNavbar 0.2s forwards;
+}
+.growNavbar {
+    top: 0vh;
+    animation: showNavbar 1s ease-in forwards, growNavbar 0.2s forwards;
 }
 .navigationLabel {
     color: whitesmoke;
@@ -49,22 +63,64 @@
     font-weight: bold;
     font-size: 1.2vw;
     margin: 0.5vw;
+    background-color: #666;
+}
+.circle {
+    cursor: pointer;
 }
 .aboutCircle {
     --size : 6vw;
+}
+.aboutCircle:hover {
     background-color: whitesmoke;
+    transition: all 0.4s;
+}
+.aboutCircleActive {
+    background-color: whitesmoke;
+    border: 5px solid rgb(212, 212, 212);
+    color: rgb(161, 161, 161);
+}
+.aboutCircleActive:hover {
+    cursor: no-drop;
 }
 .resumeCircle {
     --size : 5.1vw;
+    transition: all 0.4s;
+}
+.resumeCircle:hover {
     background-color: rgb(209, 209, 255);
+    color: rgb(110, 110, 153);
+}
+.resumeCircleActive {
+    background-color: rgb(209, 209, 255);
+    border: 5px solid rgb(168, 168, 232);
+    color: rgb(110, 110, 153);
 }
 .projectsCircle {
     --size : 5vw;
-    background-color: rgb(164, 159, 159);
+    transition: all 0.4s;
+}
+.projectsCircle:hover {
+    background-color: rgb(175, 169, 169);
+    color: rgb(77, 77, 77);
+}
+.projectsCircleActive {
+    background-color: rgb(175, 169, 169);
+    border: 5px solid rgb(126, 124, 124);
+    color: rgb(77, 77, 77);
 }
 .funCircle {
     --size : 4.2vw;
-    background-color: tan;
+    transition: all 0.4s;
+}
+.funCircle:hover {
+    background-color: rgb(214, 194, 167);
+    color: rgb(142, 114, 76);
+}
+.funCircleActive {
+    background-color: rgb(214, 194, 167);
+    border: 5px solid rgb(176, 146, 107);
+    color: rgb(142, 114, 76);
 }
 
 @keyframes showNavbar{
@@ -78,6 +134,49 @@
         top: 0vh;
         opacity: 1;
         transform: scale(1, 1);
+    }
+}
+@keyframes shrinkNavbar{
+    0%{
+        opacity: 1;
+    }
+    100% {
+        top: 0vh;
+        opacity: 1;
+        height: 8vw;
+    }
+}
+@keyframes growNavbar{
+    0%{
+        opacity: 1;
+        height: 8vw;
+    }
+    100% {
+        top: 0vh;
+        opacity: 1;
+        height: 10vw;
+    }
+}
+@keyframes growNavbarMobile{
+    0%{
+        opacity: 1;
+        height: 75px;
+    }
+    100% {
+        top: 0vh;
+        opacity: 1;
+        height: 100px;
+    }
+}
+@keyframes shrinkNavbarMobile{
+    0%{
+        opacity: 1;
+        height: 100px;
+    }
+    100% {
+        top: 0vh;
+        opacity: 1;
+        height: 75px;
     }
 }
 @keyframes showContent{
@@ -94,3 +193,38 @@
         opacity: 1;
     }
 }
+
+
+
+@media only screen and (max-width: 850px) {
+    .navbarContainer {
+      width: 100%;
+      left: 0;
+      height: 100px;
+    }
+    .smallNavbar {
+        animation: showNavbar 1s ease-in forwards, shrinkNavbarMobile 0.2s forwards;
+    }
+    .growNavbar {
+        animation: showNavbar 1s ease-in forwards, growNavbarMobile 0.2s forwards;
+    }
+    .circleDivider {
+        width: 30px;
+    }
+    .aboutCircle {
+        --size : 53px;
+        font-size: 14px;
+    }
+    .projectsCircle {
+        --size : 48px;
+        font-size: 13px;
+    }
+    .resumeCircle {
+        --size : 47px;
+        font-size: 13px;
+    }
+    .funCircle {
+        --size : 40px;
+        font-size: 13px;
+    }
+  }

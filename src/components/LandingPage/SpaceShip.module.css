@@ -57,7 +57,6 @@
 
 @keyframes spaceShipTopClose{
         0%{
-        
         }
         17%{
             top: 0vh;
@@ -68,7 +67,7 @@
         100% {
             top: -70vh;
         }
-    }
+}
 
 @keyframes spaceShipBottomClose{
     0%{

@@ -1,10 +1,11 @@
 .landingPageContainer{
     overflow: hidden;
 }
+
 .funPageContainer {
     text-align: center;
     background-color: rgb(214, 194, 167);
-    height: 100vh;
+    height: 230vh;
 }
 .aboutPageContainer {
     text-align: center;
@@ -26,6 +27,11 @@
 .PageTitle {
     font-weight: bold;
     margin: 0;
-    padding-top: 25vh;
-    opacity: 0;
+    padding-top: 30vh;
+    opacity: 1;
+    color: black;
+}
+.scrollContainer {
+    height: 100vh;
+    overflow: auto;
 }

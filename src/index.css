@@ -8,4 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(23, 23, 23);
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 
