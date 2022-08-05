@@ -81,7 +81,7 @@
     animation: centerCircle 1.7s forwards ease-in-out, flyTo 4.3s forwards 1.7s ease-in; 
 }
 .projectsRing {
-    --size: 18vw;
+    --size: 17vw;
 }
 .funCircle {
     --size : 4.2vw;
@@ -114,12 +114,12 @@
 @keyframes projectsRotation {
     0%{
         transform:rotate(0deg)
-                  translate(-9vw)
+                  translate(-8.5vw)
                   rotate(0deg);
       }
       100%{
         transform:rotate(360deg)
-                  translate(-9vw)
+                  translate(-8.5vw)
                   rotate(-360deg);
       }
 }
